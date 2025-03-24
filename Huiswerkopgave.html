@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+    <html lang="nl">
+        <head>
+            <meta   charset="UTF-8">
+            <meta   name="viewport" 
+                    content="width=device-width, initial-scale=1.0">
+            <meta   name="author"
+                    content="Daan van Gorp">
+            <title>jQuery Voorbeeld</title>
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+                <style>
+                    body {
+                            font-family: Arial, sans-serif;
+                            text-align: center;
+                            margin: 50px;
+                        }
+                    #tekst {
+                            display: none;
+                            margin-top: 20px;
+                            font-size: 18px;
+                            color: #333;
+                        }
+                    button {
+                            padding: 10px 20px;
+                            font-size: 16px;
+                            cursor: pointer;
+                        }
+                </style>
+        </head>
+        <body>
+            <h1>jQuery</h1>
+                <button id="toggleKnop">Toon/verberg tekst</button>
+                <p id="tekst">Zou het nu gelukt zijn?</p>
+
+            <script>
+                $(document).ready(function() {
+                    $("#toggleKnop").click(function() {
+                        $("#tekst").fadeToggle();
+                    });
+                });
+            </script>
+        </body>
+    </html>
